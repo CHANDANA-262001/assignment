@@ -1,0 +1,178 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  .speakers-section {
+    text-align: center;
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  h1 {
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+  }
+  
+  .intro-text {
+    color: gray;
+    font-size: 0.9em;
+    margin-bottom: 1.5em;
+  }
+  
+  .speakers-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+    transition: margin-top 0.3s ease; /* Smooth transition for the cards when the popover appears */
+  }
+  
+  .speaker-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+    flex: 1 0 calc(25% - 20px); /* 4 cards in a row */
+  }
+  
+  .speaker-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .speaker-card__image {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin: 0 auto;
+  }
+  
+  .speaker-card__name {
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 1.1em;
+  }
+  
+  .speaker-card__title {
+    color: gray;
+    font-size: 0.9em;
+  }
+  
+  .see-program-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .see-program-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Popover Styles */
+  .popover {
+    display: none;
+    position: relative;
+    width: 80%;
+    max-width: 500px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    text-align: left;
+    margin: 0 auto;
+  }
+  
+  .popover__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+  
+  .popover__content {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .popover__image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+  }
+  
+  .popover__text {
+    flex: 1;
+  }
+  
+  .popover__name {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .popover__title {
+    color: gray;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+  }
+  
+  .popover__bio {
+    font-size: 0.9em;
+    color: #333;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 600px) {
+    .popover {
+      width: 90%;
+      max-width: 400px;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .popover__content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .popover__image {
+      margin-bottom: 10px;
+    }
+  
+    .speakers-row {
+      flex-direction: column; /* Stack speakers on small screens */
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .speaker-card {
+      flex: 1 0 80%; /* Stack speaker cards in one column */
+    }
+  }
+  

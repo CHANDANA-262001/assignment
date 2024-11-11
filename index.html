@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div  class="speakers-section">
+    <h1>View our Featured Speakers for the Event</h1>
+    <p class="intro-text">Speakers are core contributors and industry thought leaders working at companies that push for innovation.</p>
+
+    <!-- Popover Modal for Speaker Details -->
+    <div class="popover" id="popover">
+      <button class="popover__close" id="popoverClose">&times;</button>
+      <div class="popover__content" id="popoverContent">
+        <!-- Speaker details with image and text will be injected here -->
+      </div>
+    </div>
+
+    <!-- Speaker Cards Row -->
+    <div  class="speakers-row" id="slider">
+      <!-- Speaker cards will be added here dynamically -->
+    </div>
+
+    <button class="see-program-btn">See the Program</button>
+  </div>
+  <style>
+    body{
+        background-color: white;
+    }
+  </style>
+
+  <script src="script.js"></script>
+</body>
+</html>  
